@@ -12,4 +12,15 @@
         <module>complete</module>
     </modules>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>s3</id>
+            <url>s3://maven.gumeniuc.me/snapshot</url>
+        </snapshotRepository>
+        <repository>
+            <id>s3</id>
+            <url>s3://maven.gumeniuc.me/release</url>
+        </repository>
+    </distributionManagement>
+
 </project>

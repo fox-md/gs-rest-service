@@ -19,6 +19,17 @@
 		<buildDirectory>${project.basedir}/target</buildDirectory>
 	</properties>
 
+	<distributionManagement>
+		<snapshotRepository>
+			<id>s3</id>
+			<url>s3://maven.gumeniuc.me/snapshot</url>
+		</snapshotRepository>
+		<repository>
+			<id>s3</id>
+			<url>s3://maven.gumeniuc.me/release</url>
+		</repository>
+	</distributionManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
