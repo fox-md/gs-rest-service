@@ -2,7 +2,7 @@
 
 FROM maven:3.6-jdk-8-alpine AS builder
 WORKDIR /app
-RUN --mount=target=. --mount=type=cache,target=/root/.m2 mvn package -DbuildDirectory=/target
+RUN --mount=target=. --mount=type=cache,target=/root/.m2 mvn package -DbuildDirectory=/target -DskipTests
 
 FROM openjdk:8-jre-alpine
 COPY complete/src/main/resources/logback.xml /logback.xml
