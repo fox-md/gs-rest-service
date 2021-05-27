@@ -1,7 +1,7 @@
 FROM maven:3.6-jdk-8-alpine AS builder
 WORKDIR /app
 COPY . .
-RUN mvn package -DbuildDirectory=/target
+RUN mvn package -DbuildDirectory=/target -DskipTests
 
 FROM openjdk:8-jre-alpine
 COPY complete/src/main/resources/logback.xml /logback.xml
